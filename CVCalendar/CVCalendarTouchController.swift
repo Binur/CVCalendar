@@ -45,7 +45,7 @@ extension CVCalendarTouchController {
     }
     
     public func receiveTouchOnDayView(dayView: CVCalendarDayView) {
-        coordinator.performDayViewSingleSelection(dayView)
+//        coordinator.performDayViewSingleSelection(dayView)
     }
 }
 
@@ -56,7 +56,7 @@ private extension CVCalendarTouchController {
         if let calendarView = dayView.weekView.monthView.calendarView {
             switch selectionType {
             case .Single:
-                coordinator.performDayViewSingleSelection(dayView)
+//                coordinator.performDayViewSingleSelection(dayView)
                 calendarView.didSelectDayView(dayView)
                 
             case .Range(.Started):

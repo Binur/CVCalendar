@@ -55,4 +55,8 @@ public protocol CVCalendarViewAppearanceDelegate {
     
     /// Dot marker default color.
     optional func dotMarkerColor() -> UIColor
+  
+  // Custom things added by binchik
+  optional func dayLabelPresentWeekdayBorderColor() -> UIColor
+  optional func dayLabelPresentWeekdayBorderWidth() -> CGFloat
 }

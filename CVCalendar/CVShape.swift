@@ -13,5 +13,4 @@ public enum CVShape {
     case RightFlag
     case Circle
     case Rect
-    case Custom((CGRect) -> (UIBezierPath))
 }

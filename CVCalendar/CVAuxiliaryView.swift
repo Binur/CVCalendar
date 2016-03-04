@@ -60,12 +60,6 @@ public final class CVAuxiliaryView: UIView {
             case .LeftFlag: path = leftFlagPath()
             case .Circle: path = circlePath()
             case .Rect: path = rectPath()
-            case .Custom(let customPathBlock): path = customPathBlock(rect)
-            }
-            
-            switch shape {
-            case .Custom: break
-            default: path.lineWidth = 1
             }
         }
         
@@ -73,6 +67,7 @@ public final class CVAuxiliaryView: UIView {
         fillColor.setFill()
         
         if let path = path {
+            path.lineWidth = 1
             path.stroke()
             path.fill()
         }
@@ -100,6 +95,7 @@ extension CVAuxiliaryView {
         let path = UIBezierPath(arcCenter: arcCenter, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: clockwise)
         
         return path
+        
     }
     
     func rightFlagPath() -> UIBezierPath {

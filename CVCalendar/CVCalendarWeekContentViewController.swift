@@ -45,7 +45,7 @@ public final class CVCalendarWeekContentViewController: CVCalendarContentViewCon
                 self.calendarView.coordinator.flush()
                 if self.calendarView.shouldAutoSelectDayOnWeekChange{
                     self.calendarView.touchController.receiveTouchOnDayView(dayView)
-                    dayView.selectionView?.removeFromSuperview()
+                    dayView.circleView?.removeFromSuperview()
                 }
             }
         }
